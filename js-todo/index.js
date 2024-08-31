@@ -11,7 +11,7 @@ todoAddbuton.addEventListener('click', () => {
 
   const listItem = document.createElement('li');
   listItem.className = "todo-li";
-  listItem.innerHTML = "ほげほげ";
+  listItem.innerHTML = val;
 
   todoList.appendChild(listItem);
 
@@ -21,6 +21,12 @@ todoAddbuton.addEventListener('click', () => {
   listItem.appendChild(buttonItem);
 
   console.log(val);
+
+  buttonItem.addEventListener('click', () => {
+    todoList.removeChild(listItem);
+    console.log(val);
+  })
+
 
   todoInputTextBox.value = "";
 });

@@ -15,6 +15,11 @@ todoAddbuton.addEventListener('click', () => {
 
   todoList.appendChild(listItem);
 
+  const buttonItem = document.createElement('button');
+  buttonItem.innerHTML = "DELETE";
+
+  listItem.appendChild(buttonItem);
+
   console.log(val);
 
   todoInputTextBox.value = "";
